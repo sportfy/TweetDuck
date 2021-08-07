@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using TweetLib.Core.Application;
+using TweetLib.Core.Systems.Api;
 
 namespace TweetLib.Core {
 	public sealed class App {
+		public static ApiImplementation Api { get; } = new ApiImplementation();
+
 		#pragma warning disable CS8618 // Non-nullable field is uninitialized. Consider declaring as nullable.
 		public static IAppErrorHandler ErrorHandler { get; private set; }
 		public static IAppSystemHandler SystemHandler { get; private set; }

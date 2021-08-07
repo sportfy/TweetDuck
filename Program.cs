@@ -16,6 +16,7 @@ using TweetDuck.Resources;
 using TweetDuck.Utils;
 using TweetLib.Core;
 using TweetLib.Core.Collections;
+using TweetLib.Core.Features.Extensions;
 using TweetLib.Core.Utils;
 using Win = System.Windows.Forms;
 
@@ -33,6 +34,7 @@ namespace TweetDuck {
 
 		public static readonly string ScriptPath = Path.Combine(ProgramPath, "scripts");
 		public static readonly string PluginPath = Path.Combine(ProgramPath, "plugins");
+		public static readonly string ExtensionPath = Path.Combine(ProgramPath, "extensions");
 
 		public static readonly string StoragePath = IsPortable ? Path.Combine(ProgramPath, "portable", "storage") : GetDataStoragePath();
 
@@ -152,6 +154,9 @@ namespace TweetDuck {
 			Cef.Initialize(settings, false, new BrowserProcessHandler());
 
 			Win.Application.ApplicationExit += (sender, args) => ExitCleanup();
+
+			ApiServices.Register();
+			ExtensionLoader.LoadAllInFolder(ExtensionPath);
 
 			FormBrowser mainForm = new FormBrowser(pluginScheme);
 			Resources.Initialize(mainForm);

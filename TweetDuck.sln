@@ -16,6 +16,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "TweetTest.Unit", "lib\Tweet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetDuck.Core", "lib\TweetLib.Core\TweetLib.Core.csproj", "{93BA3CB4-A812-4949-B07D-8D393FB38937}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetLib.Api", "lib\TweetLib.Api\TweetLib.Api.csproj", "{85596C10-F76E-4619-9CC6-6C1593880F83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -48,6 +50,10 @@ Global
 		{93BA3CB4-A812-4949-B07D-8D393FB38937}.Debug|x86.Build.0 = Debug|x86
 		{93BA3CB4-A812-4949-B07D-8D393FB38937}.Release|x86.ActiveCfg = Release|x86
 		{93BA3CB4-A812-4949-B07D-8D393FB38937}.Release|x86.Build.0 = Release|x86
+		{85596C10-F76E-4619-9CC6-6C1593880F83}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{85596C10-F76E-4619-9CC6-6C1593880F83}.Debug|x86.Build.0 = Debug|Any CPU
+		{85596C10-F76E-4619-9CC6-6C1593880F83}.Release|x86.ActiveCfg = Release|Any CPU
+		{85596C10-F76E-4619-9CC6-6C1593880F83}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
