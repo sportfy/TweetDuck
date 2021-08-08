@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using TweetDuck.Browser.Data;
+using TweetDuck.Browser.Notification;
 using TweetLib.Core.Features.Plugins.Config;
 using TweetLib.Core.Serialization.Converters;
 using TweetLib.Core.Systems.Configuration;
@@ -34,6 +35,7 @@ namespace TweetDuck.Configuration {
 			// TODO refactor further
 
 			infoUser.Serializer.RegisterTypeConverter(typeof(WindowState), WindowState.Converter);
+			infoUser.Serializer.RegisterTypeConverter(typeof(NotificationScreen), NotificationScreen.Converter);
 
 			infoUser.Serializer.RegisterTypeConverter(typeof(Point), new SingleTypeConverter<Point> {
 				ConvertToString = value => $"{value.X} {value.Y}",

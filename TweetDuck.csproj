@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\ApiServices.cs" />
+    <Compile Include="Application\Service\NotificationService.cs" />
+    <Compile Include="Browser\Notification\NotificationScreen.cs" />
     <Compile Include="Management\LockManager.cs" />
     <Compile Include="Application\SystemHandler.cs" />
     <Compile Include="Browser\Adapters\CefScriptExecutor.cs" />
